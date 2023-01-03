@@ -1,8 +1,9 @@
 import express from 'express';
 import csv from 'csvtojson';
+import cors from 'cors';
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 type Patient = {
     agemos: number,
@@ -31,6 +32,10 @@ app.post('/', async (req, res) => {
             z_score: zScore
         });
     }
+})
+app.get('/get-data', cors(), async (req, res) => {
+    const data = await csv().fromFile(process.env.PWD + '/data/' + req.query.file + '.csv');
+    res.json(data);
 })
 
 /**

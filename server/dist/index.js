@@ -14,8 +14,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const csvtojson_1 = __importDefault(require("csvtojson"));
+const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
-const PORT = 3000;
+const PORT = 3001;
 app.use(express_1.default.json());
 app.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { patient, attribute } = req.body;
@@ -30,6 +31,10 @@ app.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             z_score: zScore
         });
     }
+}));
+app.get('/get-data', (0, cors_1.default)(), (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const data = yield (0, csvtojson_1.default)().fromFile(process.env.PWD + '/data/' + req.query.file + '.csv');
+    res.json(data);
 }));
 /**
  * Calculates the Z score based off of patient data and selected attribute
