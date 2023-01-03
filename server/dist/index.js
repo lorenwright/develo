@@ -14,10 +14,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const csvtojson_1 = __importDefault(require("csvtojson"));
-const cors_1 = __importDefault(require("cors"));
+const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
-const PORT = 3001;
 app.use(express_1.default.json());
+/**
+ * The endpoint to hit in order to get the Z score
+ */
 app.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { patient, attribute } = req.body;
     const zScore = yield calculateZScore(patient, attribute);
@@ -32,10 +34,6 @@ app.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         });
     }
 }));
-app.get('/get-data', (0, cors_1.default)(), (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const data = yield (0, csvtojson_1.default)().fromFile(process.env.PWD + '/data/' + req.query.file + '.csv');
-    res.json(data);
-}));
 /**
  * Calculates the Z score based off of patient data and selected attribute
  *
@@ -44,9 +42,11 @@ app.get('/get-data', (0, cors_1.default)(), (req, res) => __awaiter(void 0, void
  * @returns {float} - The z score
  */
 const calculateZScore = (patient, attribute) => __awaiter(void 0, void 0, void 0, function* () {
+    // If no sex is given for patient, we cannot properly parse the data
     if (!patient.sex) {
         return 'sex not defined';
     }
+    // Get the file that we should be checking data for based off of attribute and agemos
     let file;
     switch (attribute) {
         case 'weight':
@@ -78,19 +78,27 @@ const calculateZScore = (patient, attribute) => __awaiter(void 0, void 0, void 0
         default:
             break;
     }
+    // If there is no matching data, throw error
     if (!file) {
         return 'no matching dataset';
     }
-    const data = yield (0, csvtojson_1.default)().fromFile(process.env.PWD + '/data/' + file);
+    // The server file path
+    const filePath = path_1.default.parse(path_1.default.resolve(__dirname, '../'));
+    // Parse CSV to JSON
+    const data = yield (0, csvtojson_1.default)().fromFile(`${filePath.dir}/${filePath.name}/data/${file}`);
+    // Get Agemos and sex to compare against
     const entry = data.find(d => parseFloat(d.Agemos) === patient.agemos && parseInt(d.Sex, 10) === patient.sex);
+    // If no entry was found, throw error
     if (!entry) {
         return 'no entry found';
     }
+    // Get the X, M, S, and L variables for formula
     // @ts-ignore
     const X = parseFloat(patient[attribute]);
     const M = parseFloat(entry.M);
     const S = parseFloat(entry.S);
     const L = parseFloat(entry.L);
+    // If we have X, then we can actually perform calculations, otherwise throw error
     if (X) {
         if (L === 0) {
             // Z=ln(X/M)/S
@@ -106,9 +114,21 @@ const calculateZScore = (patient, attribute) => __awaiter(void 0, void 0, void 0
     }
     return `Attribute not found for patient`;
 });
-// start the Express server
-app.listen(PORT, () => {
-    // tslint:disable-next-line:no-console
-    console.log(`server started at http://localhost:${PORT}`);
-});
+/**
+ * Parse the given CSV and return as JSON
+ */
+app.post('/get-data', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { file } = req.body;
+    try {
+        // The server file path
+        const filePath = path_1.default.parse(path_1.default.resolve(__dirname, '../'));
+        // Parse CSV to JSON
+        const data = yield (0, csvtojson_1.default)().fromFile(`${filePath.dir}/${filePath.name}/data/${file}.csv`);
+        res.json(data);
+    }
+    catch (_a) {
+        res.status(404).json('File not found.');
+    }
+}));
+module.exports = app;
 //# sourceMappingURL=index.js.map

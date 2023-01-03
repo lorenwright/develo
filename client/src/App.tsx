@@ -161,7 +161,13 @@ function App() {
    * @returns {object} - return data, xMin, xMax, yMin, yMax
    */
   const fetchData = async (filename: string) => {
-    const res = await fetch(`http://localhost:3001/get-data?file=${filename}`);
+    const res = await fetch(`http://localhost:3001/production/get-data`, {
+      method: 'post',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        file: filename
+      })
+    });
     let data = await res.json();
     // @ts-ignore
     data = data.filter((d: ChartData) => !isNaN(d.Agemos))

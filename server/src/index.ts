@@ -1,9 +1,9 @@
 import express from 'express';
 import csv from 'csvtojson';
 import cors from 'cors';
+import path from "path";
 
 const app = express();
-const PORT = 3001;
 
 type Patient = {
     agemos: number,
@@ -15,6 +15,10 @@ type Patient = {
 }
 
 app.use(express.json());
+
+/**
+ * The endpoint to hit in order to get the Z score
+ */
 app.post('/', async (req, res) => {
     const {
         patient,
@@ -33,10 +37,6 @@ app.post('/', async (req, res) => {
         });
     }
 })
-app.get('/get-data', cors(), async (req, res) => {
-    const data = await csv().fromFile(process.env.PWD + '/data/' + req.query.file + '.csv');
-    res.json(data);
-})
 
 /**
  * Calculates the Z score based off of patient data and selected attribute
@@ -46,10 +46,12 @@ app.get('/get-data', cors(), async (req, res) => {
  * @returns {float} - The z score
  */
 const calculateZScore = async (patient: Patient, attribute: string) => {
+    // If no sex is given for patient, we cannot properly parse the data
     if (!patient.sex) {
         return 'sex not defined'
     }
 
+    // Get the file that we should be checking data for based off of attribute and agemos
     let file
     switch (attribute) {
         case 'weight':
@@ -80,23 +82,32 @@ const calculateZScore = async (patient: Patient, attribute: string) => {
             break
     }
 
+    // If there is no matching data, throw error
     if (!file) {
         return 'no matching dataset'
     }
 
-    const data = await csv().fromFile(process.env.PWD + '/data/' + file);
+    // The server file path
+    const filePath = path.parse(path.resolve(__dirname, '../'))
+
+    // Parse CSV to JSON
+    const data = await csv().fromFile(`${filePath.dir}/${filePath.name}/data/${file}`);
+    // Get Agemos and sex to compare against
     const entry = data.find(d => parseFloat(d.Agemos) === patient.agemos && parseInt(d.Sex, 10) === patient.sex)
 
+    // If no entry was found, throw error
     if (!entry) {
         return 'no entry found'
     }
 
+    // Get the X, M, S, and L variables for formula
     // @ts-ignore
     const X = parseFloat(patient[attribute])
     const M = parseFloat(entry.M)
     const S = parseFloat(entry.S)
     const L = parseFloat(entry.L)
 
+    // If we have X, then we can actually perform calculations, otherwise throw error
     if (X) {
         if (L === 0) {
             // Z=ln(X/M)/S
@@ -114,8 +125,21 @@ const calculateZScore = async (patient: Patient, attribute: string) => {
 
 }
 
-// start the Express server
-app.listen( PORT, () => {
-    // tslint:disable-next-line:no-console
-    console.log( `server started at http://localhost:${ PORT }` );
-} );
+/**
+ * Parse the given CSV and return as JSON
+ */
+app.post('/get-data', async (req, res) => {
+    const { file } = req.body;
+    try {
+        // The server file path
+        const filePath = path.parse(path.resolve(__dirname, '../'))
+
+        // Parse CSV to JSON
+        const data = await csv().fromFile(`${filePath.dir}/${filePath.name}/data/${file}.csv`);
+        res.json(data);
+    } catch {
+        res.status(404).json('File not found.');
+    }
+})
+
+module.exports = app;
