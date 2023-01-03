@@ -1,0 +1,458 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Axis renders correctly 1`] = `
+[
+  <g>
+    <path
+      d="M 30 680 H 470"
+      stroke="#fff"
+    />
+    <g
+      transform="translate(30, 680)"
+    >
+      <line
+        stroke="#fff"
+        y2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "middle",
+            "transform": "translateY(20px)",
+          }
+        }
+      >
+        0
+      </text>
+    </g>
+    <g
+      transform="translate(74, 680)"
+    >
+      <line
+        stroke="#fff"
+        y2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "middle",
+            "transform": "translateY(20px)",
+          }
+        }
+      >
+        10
+      </text>
+    </g>
+    <g
+      transform="translate(118, 680)"
+    >
+      <line
+        stroke="#fff"
+        y2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "middle",
+            "transform": "translateY(20px)",
+          }
+        }
+      >
+        20
+      </text>
+    </g>
+    <g
+      transform="translate(162, 680)"
+    >
+      <line
+        stroke="#fff"
+        y2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "middle",
+            "transform": "translateY(20px)",
+          }
+        }
+      >
+        30
+      </text>
+    </g>
+    <g
+      transform="translate(206, 680)"
+    >
+      <line
+        stroke="#fff"
+        y2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "middle",
+            "transform": "translateY(20px)",
+          }
+        }
+      >
+        40
+      </text>
+    </g>
+    <g
+      transform="translate(250, 680)"
+    >
+      <line
+        stroke="#fff"
+        y2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "middle",
+            "transform": "translateY(20px)",
+          }
+        }
+      >
+        50
+      </text>
+    </g>
+    <g
+      transform="translate(294, 680)"
+    >
+      <line
+        stroke="#fff"
+        y2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "middle",
+            "transform": "translateY(20px)",
+          }
+        }
+      >
+        60
+      </text>
+    </g>
+    <g
+      transform="translate(338, 680)"
+    >
+      <line
+        stroke="#fff"
+        y2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "middle",
+            "transform": "translateY(20px)",
+          }
+        }
+      >
+        70
+      </text>
+    </g>
+    <g
+      transform="translate(382, 680)"
+    >
+      <line
+        stroke="#fff"
+        y2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "middle",
+            "transform": "translateY(20px)",
+          }
+        }
+      >
+        80
+      </text>
+    </g>
+    <g
+      transform="translate(426, 680)"
+    >
+      <line
+        stroke="#fff"
+        y2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "middle",
+            "transform": "translateY(20px)",
+          }
+        }
+      >
+        90
+      </text>
+    </g>
+    <g
+      transform="translate(470, 680)"
+    >
+      <line
+        stroke="#fff"
+        y2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "middle",
+            "transform": "translateY(20px)",
+          }
+        }
+      >
+        100
+      </text>
+    </g>
+  </g>,
+  <g>
+    <path
+      d="M 30 5 V 680"
+      stroke="#fff"
+    />
+    <g
+      transform="translate(24, 5)"
+    >
+      <line
+        stroke="#fff"
+        x2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "end",
+            "transform": "translate(-3px, 3px)",
+          }
+        }
+      >
+        100
+      </text>
+    </g>
+    <g
+      transform="translate(24, 72.49999999999999)"
+    >
+      <line
+        stroke="#fff"
+        x2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "end",
+            "transform": "translate(-3px, 3px)",
+          }
+        }
+      >
+        90
+      </text>
+    </g>
+    <g
+      transform="translate(24, 139.99999999999997)"
+    >
+      <line
+        stroke="#fff"
+        x2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "end",
+            "transform": "translate(-3px, 3px)",
+          }
+        }
+      >
+        80
+      </text>
+    </g>
+    <g
+      transform="translate(24, 207.50000000000003)"
+    >
+      <line
+        stroke="#fff"
+        x2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "end",
+            "transform": "translate(-3px, 3px)",
+          }
+        }
+      >
+        70
+      </text>
+    </g>
+    <g
+      transform="translate(24, 275)"
+    >
+      <line
+        stroke="#fff"
+        x2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "end",
+            "transform": "translate(-3px, 3px)",
+          }
+        }
+      >
+        60
+      </text>
+    </g>
+    <g
+      transform="translate(24, 342.5)"
+    >
+      <line
+        stroke="#fff"
+        x2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "end",
+            "transform": "translate(-3px, 3px)",
+          }
+        }
+      >
+        50
+      </text>
+    </g>
+    <g
+      transform="translate(24, 410)"
+    >
+      <line
+        stroke="#fff"
+        x2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "end",
+            "transform": "translate(-3px, 3px)",
+          }
+        }
+      >
+        40
+      </text>
+    </g>
+    <g
+      transform="translate(24, 477.49999999999994)"
+    >
+      <line
+        stroke="#fff"
+        x2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "end",
+            "transform": "translate(-3px, 3px)",
+          }
+        }
+      >
+        30
+      </text>
+    </g>
+    <g
+      transform="translate(24, 545)"
+    >
+      <line
+        stroke="#fff"
+        x2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "end",
+            "transform": "translate(-3px, 3px)",
+          }
+        }
+      >
+        20
+      </text>
+    </g>
+    <g
+      transform="translate(24, 612.5)"
+    >
+      <line
+        stroke="#fff"
+        x2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "end",
+            "transform": "translate(-3px, 3px)",
+          }
+        }
+      >
+        10
+      </text>
+    </g>
+    <g
+      transform="translate(24, 680)"
+    >
+      <line
+        stroke="#fff"
+        x2="6"
+      />
+      <text
+        style={
+          {
+            "fill": "#fff",
+            "fontSize": "10px",
+            "textAnchor": "end",
+            "transform": "translate(-3px, 3px)",
+          }
+        }
+      >
+        0
+      </text>
+    </g>
+  </g>,
+]
+`;

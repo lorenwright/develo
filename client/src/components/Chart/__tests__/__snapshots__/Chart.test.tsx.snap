@@ -1,0 +1,588 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chart renders correctly 1`] = `
+<div
+  className="bg-slate-700/25 rounded-xl p-4"
+>
+  <h2
+    className="text-2xl text-sky-500 font-bold text-center"
+  >
+    Weight for Age
+  </h2>
+  <div
+    className="flex items-center"
+  >
+    <div
+      className="w-3"
+    >
+      <h4
+        className="text-xs text-sky-500 text-center -rotate-90"
+      >
+        Measurement
+      </h4>
+    </div>
+    <div>
+      <svg
+        className=""
+        height={700}
+        width={0}
+      >
+        <g>
+          <path
+            d="M 30 680 H -30"
+            stroke="#fff"
+          />
+          <g
+            transform="translate(30, 680)"
+          >
+            <line
+              stroke="#fff"
+              y2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "middle",
+                  "transform": "translateY(20px)",
+                }
+              }
+            >
+              0
+            </text>
+          </g>
+          <g
+            transform="translate(24, 680)"
+          >
+            <line
+              stroke="#fff"
+              y2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "middle",
+                  "transform": "translateY(20px)",
+                }
+              }
+            >
+              10
+            </text>
+          </g>
+          <g
+            transform="translate(18, 680)"
+          >
+            <line
+              stroke="#fff"
+              y2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "middle",
+                  "transform": "translateY(20px)",
+                }
+              }
+            >
+              20
+            </text>
+          </g>
+          <g
+            transform="translate(12, 680)"
+          >
+            <line
+              stroke="#fff"
+              y2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "middle",
+                  "transform": "translateY(20px)",
+                }
+              }
+            >
+              30
+            </text>
+          </g>
+          <g
+            transform="translate(6, 680)"
+          >
+            <line
+              stroke="#fff"
+              y2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "middle",
+                  "transform": "translateY(20px)",
+                }
+              }
+            >
+              40
+            </text>
+          </g>
+          <g
+            transform="translate(0, 680)"
+          >
+            <line
+              stroke="#fff"
+              y2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "middle",
+                  "transform": "translateY(20px)",
+                }
+              }
+            >
+              50
+            </text>
+          </g>
+          <g
+            transform="translate(-6, 680)"
+          >
+            <line
+              stroke="#fff"
+              y2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "middle",
+                  "transform": "translateY(20px)",
+                }
+              }
+            >
+              60
+            </text>
+          </g>
+          <g
+            transform="translate(-11.999999999999998, 680)"
+          >
+            <line
+              stroke="#fff"
+              y2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "middle",
+                  "transform": "translateY(20px)",
+                }
+              }
+            >
+              70
+            </text>
+          </g>
+          <g
+            transform="translate(-18, 680)"
+          >
+            <line
+              stroke="#fff"
+              y2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "middle",
+                  "transform": "translateY(20px)",
+                }
+              }
+            >
+              80
+            </text>
+          </g>
+          <g
+            transform="translate(-24, 680)"
+          >
+            <line
+              stroke="#fff"
+              y2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "middle",
+                  "transform": "translateY(20px)",
+                }
+              }
+            >
+              90
+            </text>
+          </g>
+          <g
+            transform="translate(-30, 680)"
+          >
+            <line
+              stroke="#fff"
+              y2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "middle",
+                  "transform": "translateY(20px)",
+                }
+              }
+            >
+              100
+            </text>
+          </g>
+        </g>
+        <g>
+          <path
+            d="M 30 5 V 680"
+            stroke="#fff"
+          />
+          <g
+            transform="translate(24, 5)"
+          >
+            <line
+              stroke="#fff"
+              x2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "end",
+                  "transform": "translate(-3px, 3px)",
+                }
+              }
+            >
+              100
+            </text>
+          </g>
+          <g
+            transform="translate(24, 72.49999999999999)"
+          >
+            <line
+              stroke="#fff"
+              x2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "end",
+                  "transform": "translate(-3px, 3px)",
+                }
+              }
+            >
+              90
+            </text>
+          </g>
+          <g
+            transform="translate(24, 139.99999999999997)"
+          >
+            <line
+              stroke="#fff"
+              x2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "end",
+                  "transform": "translate(-3px, 3px)",
+                }
+              }
+            >
+              80
+            </text>
+          </g>
+          <g
+            transform="translate(24, 207.50000000000003)"
+          >
+            <line
+              stroke="#fff"
+              x2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "end",
+                  "transform": "translate(-3px, 3px)",
+                }
+              }
+            >
+              70
+            </text>
+          </g>
+          <g
+            transform="translate(24, 275)"
+          >
+            <line
+              stroke="#fff"
+              x2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "end",
+                  "transform": "translate(-3px, 3px)",
+                }
+              }
+            >
+              60
+            </text>
+          </g>
+          <g
+            transform="translate(24, 342.5)"
+          >
+            <line
+              stroke="#fff"
+              x2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "end",
+                  "transform": "translate(-3px, 3px)",
+                }
+              }
+            >
+              50
+            </text>
+          </g>
+          <g
+            transform="translate(24, 410)"
+          >
+            <line
+              stroke="#fff"
+              x2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "end",
+                  "transform": "translate(-3px, 3px)",
+                }
+              }
+            >
+              40
+            </text>
+          </g>
+          <g
+            transform="translate(24, 477.49999999999994)"
+          >
+            <line
+              stroke="#fff"
+              x2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "end",
+                  "transform": "translate(-3px, 3px)",
+                }
+              }
+            >
+              30
+            </text>
+          </g>
+          <g
+            transform="translate(24, 545)"
+          >
+            <line
+              stroke="#fff"
+              x2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "end",
+                  "transform": "translate(-3px, 3px)",
+                }
+              }
+            >
+              20
+            </text>
+          </g>
+          <g
+            transform="translate(24, 612.5)"
+          >
+            <line
+              stroke="#fff"
+              x2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "end",
+                  "transform": "translate(-3px, 3px)",
+                }
+              }
+            >
+              10
+            </text>
+          </g>
+          <g
+            transform="translate(24, 680)"
+          >
+            <line
+              stroke="#fff"
+              x2="6"
+            />
+            <text
+              style={
+                {
+                  "fill": "#fff",
+                  "fontSize": "10px",
+                  "textAnchor": "end",
+                  "transform": "translate(-3px, 3px)",
+                }
+              }
+            >
+              0
+            </text>
+          </g>
+        </g>
+        <path />
+        <g>
+          <path
+            className=""
+          />
+        </g>
+        <g>
+          <path
+            className=""
+          />
+        </g>
+        <g>
+          <path
+            className=""
+          />
+        </g>
+        <g>
+          <path
+            className=""
+          />
+        </g>
+        <g>
+          <path
+            className=""
+          />
+        </g>
+        <g>
+          <path
+            className="draw-line"
+          />
+        </g>
+        <g>
+          <circle
+            className="plot"
+            cx={10.199999999999998}
+            cy={599}
+            fill="#38bdf8"
+            r={6}
+            stroke="#fff"
+          />
+          <circle
+            className="plot"
+            cx={0}
+            cy={545}
+            fill="#38bdf8"
+            r={6}
+            stroke="#fff"
+          />
+          <circle
+            className="plot"
+            cx={-11.999999999999998}
+            cy={511.25}
+            fill="#38bdf8"
+            r={6}
+            stroke="#fff"
+          />
+          <circle
+            className="plot"
+            cx={-27}
+            cy={484.24999999999994}
+            fill="#38bdf8"
+            r={6}
+            stroke="#fff"
+          />
+          <circle
+            className="plot"
+            cx={-42}
+            cy={362.75000000000006}
+            fill="#38bdf8"
+            r={6}
+            stroke="#fff"
+          />
+          <circle
+            className="plot"
+            cx={-72}
+            cy={207.50000000000003}
+            fill="#38bdf8"
+            r={6}
+            stroke="#fff"
+          />
+          <circle
+            className="plot"
+            cx={-90}
+            cy={153.5}
+            fill="#38bdf8"
+            r={6}
+            stroke="#fff"
+          />
+          <circle
+            className="plot"
+            cx={-108}
+            cy={72.49999999999999}
+            fill="#38bdf8"
+            r={6}
+            stroke="#fff"
+          />
+        </g>
+      </svg>
+      <h4
+        className="text-xs text-sky-500 text-center mt-1"
+      >
+        Age (in months)
+      </h4>
+    </div>
+  </div>
+</div>
+`;

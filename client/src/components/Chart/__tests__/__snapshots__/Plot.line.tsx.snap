@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Plot renders correctly 1`] = `
+<g>
+  <circle
+    className="plot"
+    cx={175.2}
+    cy={599}
+    fill="#38bdf8"
+    r={6}
+    stroke="#fff"
+  />
+  <circle
+    className="plot"
+    cx={250}
+    cy={545}
+    fill="#38bdf8"
+    r={6}
+    stroke="#fff"
+  />
+  <circle
+    className="plot"
+    cx={338}
+    cy={511.25}
+    fill="#38bdf8"
+    r={6}
+    stroke="#fff"
+  />
+  <circle
+    className="plot"
+    cx={448}
+    cy={484.24999999999994}
+    fill="#38bdf8"
+    r={6}
+    stroke="#fff"
+  />
+  <circle
+    className="plot"
+    cx={558}
+    cy={362.75000000000006}
+    fill="#38bdf8"
+    r={6}
+    stroke="#fff"
+  />
+  <circle
+    className="plot"
+    cx={778}
+    cy={207.50000000000003}
+    fill="#38bdf8"
+    r={6}
+    stroke="#fff"
+  />
+  <circle
+    className="plot"
+    cx={910}
+    cy={153.5}
+    fill="#38bdf8"
+    r={6}
+    stroke="#fff"
+  />
+  <circle
+    className="plot"
+    cx={1042}
+    cy={72.49999999999999}
+    fill="#38bdf8"
+    r={6}
+    stroke="#fff"
+  />
+</g>
+`;
