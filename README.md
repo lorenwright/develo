@@ -30,7 +30,7 @@ To calculate a Z score, you will need to send a POST request to [http://localhos
 }
 ```
 
-`attribute` can be one of `height`|`weight`|`head_circumference`|`bmi`
+`attribute` can be one of `height` | `weight` | `head_circumference` | `bmi`
 
 ### Deploying Server
 This module is meant to be deployed as a Lambda utilizing serverless. When working locally, the module is already utilizing `serverless-offline`, this ensures that when you are ready to deploy, your environments are already similar between local and production.
@@ -57,3 +57,9 @@ npm start
 Once that is done, the frontend can be accessed in the browser at [http://localhost:3000](http://localhost:3000).
 
 **NOTE: You will need both the client and the server to be running in order to load the chart data**
+
+### Running Test Suite
+The frontend utilizes `jest` for snapshot testing. To run the test suite, run:
+```bash
+npm test
+```
